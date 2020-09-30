@@ -38,7 +38,7 @@ Route::get('/posts/{post}', function ($post) {
     ];
 
     return view('post', [
-        'post' => $posts[$post]
+        'post' => $posts[$post] ?? 'Nothing here yet.'
     ]);
 
 });

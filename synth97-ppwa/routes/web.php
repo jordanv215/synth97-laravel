@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
+Route::get('/playground', function () {
 
-Route::get('/home', function () {
-    return view('landing');
+    // since we're requesting, this view will be empty unless the url looks something like this: http://127.0.0.1:8000/playground/?name=jordan
+    $name = request('name');
+
+    return $name;
 });

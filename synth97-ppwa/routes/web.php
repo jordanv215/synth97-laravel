@@ -27,3 +27,9 @@ Route::get('/playground', function () {
     ]);
 
 });
+
+// wildcare route
+
+Route::get('/posts/{post}', function () {
+    return view('post');
+});

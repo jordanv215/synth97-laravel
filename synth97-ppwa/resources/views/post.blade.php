@@ -6,7 +6,9 @@
     <title>Synth 97</title>
   </head>
   <body>
-    <h1>Post</h1>
+    <h1>My Blog Post</h1>
+
+    <p>{{ $post }}</p>
   </body>
 </html>
 

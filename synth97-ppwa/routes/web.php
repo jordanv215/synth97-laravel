@@ -30,6 +30,15 @@ Route::get('/playground', function () {
 
 // wildcare route
 
-Route::get('/posts/{post}', function () {
-    return view('post');
+Route::get('/posts/{post}', function ($post) {
+
+    $posts = [
+        'my-first-post' => 'Hello, this is the first post',
+        'my-second-post' => 'Yo, this is the second post'
+    ];
+
+    return view('post', [
+        'post' => $posts[$post]
+    ]);
+
 });

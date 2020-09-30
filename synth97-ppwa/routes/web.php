@@ -37,8 +37,12 @@ Route::get('/posts/{post}', function ($post) {
         'my-second-post' => 'Yo, this is the second post'
     ];
 
+    if (! array_key_exists($post, $posts)) {
+        abort(404, 'Sorry, this post was not found.');
+    }
+
     return view('post', [
-        'post' => $posts[$post] ?? 'Nothing here yet.'
+        'post' => $posts[$post]
     ]);
 
 });

@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 class PostsController
 {
-    public function show($post) {
-        $posts = [
-            'my-first-post' => 'Hello, this is the first post',
-            'my-second-post' => 'Yo, this is the second post'
-        ];
+    public function show($slug) {
+
+        $post = \DB::table('posts')->where('slug', $slug)->first();
+
+        dd($post);
+
+        // $posts = [
+        //     'my-first-post' => 'Hello, this is the first post',
+        //     'my-second-post' => 'Yo, this is the second post'
+        // ];
 
 
         // if the post doesnt exist in the datastore above, show 404

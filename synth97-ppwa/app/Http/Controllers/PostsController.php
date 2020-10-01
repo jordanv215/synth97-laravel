@@ -8,6 +8,10 @@ class PostsController
 
         $post = \DB::table('posts')->where('slug', $slug)->first();
 
+        if (! $post) {
+            abort(404);
+        }
+
         // dd($post);
 
 

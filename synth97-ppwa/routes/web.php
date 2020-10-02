@@ -33,6 +33,10 @@ Route::get('/playground', function () {
 
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 // wildcare route
 // Route::get('/posts/{post}', function ($post) {
 

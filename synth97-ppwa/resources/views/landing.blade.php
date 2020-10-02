@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Synth 97</title>
-  </head>
-  <body>
-     <h1>Welcome</h1>
-  </body>
-</html>
+@extends ('layout')
 
+
+@section ('content')
+    <h1>testing the content section</h1>
+@endsection

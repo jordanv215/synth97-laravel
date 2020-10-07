@@ -12,6 +12,3 @@
 
 @endsection
 
-@section ('content')
-
-@endsection

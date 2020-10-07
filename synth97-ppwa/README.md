@@ -59,3 +59,29 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Using Tinker
+
+To create a new database entry using php artisan tinker, follow these steps.
+
+This is assuming we have a new model and migration for articles. in the create_articles_table migration file, I added 
+        Schema::create('articles', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('excerpt');
+            $table->text('body');
+            $table->timestamps();
+        });
+as the schema. After running php artisan migrate, we got a new table with those columns.
+
+In order to create a new entry with those columns using tinker, these commands were ran:
+1. php artisan tinker
+2. $article = new App\Models\Article;
+3. $article->title = 'Getting to know us';
+4. $article->excerpt = 'article excerpt text';
+5. $article->body = 'article body text';
+
+At that point, I can run $article to view the entire entry with the new contents
+
+If satisfied, run $article->save();

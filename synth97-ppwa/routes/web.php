@@ -41,6 +41,10 @@ Route::get('/example', function () {
     return view('example');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
 // wildcare route
 // Route::get('/posts/{post}', function ($post) {
 

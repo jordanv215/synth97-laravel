@@ -37,6 +37,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/example', function () {
+    return view('example');
+});
+
 // wildcare route
 // Route::get('/posts/{post}', function ($post) {
 

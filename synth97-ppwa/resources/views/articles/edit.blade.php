@@ -5,8 +5,9 @@
     <div id="page" class="container">
         <h1>Edit Article</h1>
 
-        <form method="PUT" action="/articles/{{ $article->id }}">
+        <form method="POST" action="/articles/{{ $article->id }}">
             @csrf
+            @method('PUT')
 
             <div class="field">
                 <label class="label" for="title">Title</label>

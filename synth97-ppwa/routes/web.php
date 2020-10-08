@@ -55,6 +55,7 @@ Route::get('articles', [ArticlesController::class, 'showAll']);
 // create new article
 Route::get('articles/create', [ArticlesController::class, 'create']);
 
+Route::post('articles', [ArticlesController::class, 'store']);
 
 // {article} is a wildcard. THIS TAKES PRECEDENT OVER OTHER ROUTES, SO PUT IT BELOW THE SHOW OR CREATE, ETC
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);

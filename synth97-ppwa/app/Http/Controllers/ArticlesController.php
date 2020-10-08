@@ -17,6 +17,10 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
+    public function store() {
+        dd('hello');
+    }
+
     public function showAll() {
         $allArticles = Article::latest()->get();
 

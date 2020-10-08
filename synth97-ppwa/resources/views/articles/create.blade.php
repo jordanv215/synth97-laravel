@@ -6,6 +6,8 @@
             <h1>New Article</h1>
 
             <form method="POST" action="/articles">
+                @csrf
+
                 <div class="field">
                     <label class="label" for="title">Title</label>
 

@@ -60,6 +60,8 @@ Route::post('articles', [ArticlesController::class, 'store']);
 // {article} is a wildcard. THIS TAKES PRECEDENT OVER OTHER ROUTES, SO PUT IT BELOW THE SHOW OR CREATE, ETC
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
+Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
+
 
 
 // REST EXAMPLES

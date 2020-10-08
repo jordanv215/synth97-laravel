@@ -36,4 +36,11 @@ class ArticlesController extends Controller
         return view('articles.archive', ['allArticles' => $allArticles]);
     }
 
+    public function edit($id) {
+        // find the article with the id associated in the url
+        $article = Article::find($id);
+
+        return view('articles.edit', ['article' => $article]);
+    }
+
 }

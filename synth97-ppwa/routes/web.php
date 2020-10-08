@@ -43,9 +43,9 @@ Route::get('/example', function () {
 
 Route::get('/about', function () {
     $article = App\Models\Article::latest('updated_at')->get();
-
-    return $article;
-    return view('about');
+    return view('about', [
+        'articles' => $article
+    ]);
 });
 
 // wildcare route

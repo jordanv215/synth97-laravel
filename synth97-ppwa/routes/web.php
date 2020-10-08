@@ -55,25 +55,34 @@ Route::get('articles', [ArticlesController::class, 'showAll']);
 // {article} is a wildcard
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
-// wildcare route
-// Route::get('/posts/{post}', function ($post) {
-
-//     // associative array to simulate a db of posts
-//     $posts = [
-//         'my-first-post' => 'Hello, this is the first post',
-//         'my-second-post' => 'Yo, this is the second post'
-//     ];
 
 
-//     // if the post doesnt exist in the datastore above, show 404
-//     if (! array_key_exists($post, $posts)) {
-//         abort(404, 'Sorry, this post was not found.');
-//     }
+// REST EXAMPLES
+/*
+    Route::get('articles', 'ArticlesController@index');
+    ** will allow you to read from a list of articles, sort of like a collection
+*/
 
-//     // if it does exist, pull up the post
-//     return view('post', [
-//         'post' => $posts[$post]
-//     ]);
+/*
+    Route::get('/articles/{article}', 'ArticlesController@show');
+    ** if I visit /articles/{ some identifier }, that will allow me to read a single article
+*/
 
-// });
 
+/* SUMMARY
+
+** Common http verbs are GET, POST, PUT, DELETE (there's also PATCH but that is usable with PUT most of the time)
+    ** GET /articles (for a collection)
+    ** GET /articles/:id (for a single article)
+    ** POST /articles (create a new article)
+    ** PUT /articles/:id (update the article with a given id)
+    ** DELETE /articles/:id (delete the article with a given id)
+
+
+    ** GET /videos
+    ** GET /videos/2
+    ** PUT /videos/2
+        ** if I wanted to, say, create a form to edit the video. could be this: GET /videos/2/edit
+        ** if I wanted to go to a form that creates a new video, GET /videos/create
+        ** DELETE /videos/2
+*/

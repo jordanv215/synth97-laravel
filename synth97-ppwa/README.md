@@ -128,3 +128,5 @@ If satisfied, run $article->save();
 
 NOTE: running php artisan make:controller nameController -r will create all 7 of these actions for you
     - if you add the -m flag as well, it will ALSO reference the model throughout the controller!
+
+## Restful Routing

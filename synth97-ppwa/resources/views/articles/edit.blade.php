@@ -5,7 +5,7 @@
     <div id="page" class="container">
         <h1>Edit Article</h1>
 
-        <form method="POST" action="/articles">
+        <form method="PUT" action="/articles/{{ $article->id }}">
             @csrf
 
             <div class="field">

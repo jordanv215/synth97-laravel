@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticlesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +49,9 @@ Route::get('/about', function () {
         'articles' => $article
     ]);
 });
+
+// {article} is a wildcard
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
 // wildcare route
 // Route::get('/posts/{post}', function ($post) {

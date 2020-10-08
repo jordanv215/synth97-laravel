@@ -12,4 +12,11 @@ class ArticlesController extends Controller
 
         return view('articles.show', ['article' => $article]);
     }
+
+    public function showAll() {
+        $allArticles = Article::latest()->get();
+
+        return view('articles.archive', ['allArticles' => $allArticles]);
+    }
+
 }

@@ -50,6 +50,8 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('articles', [ArticlesController::class, 'showAll']);
+
 // {article} is a wildcard
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 

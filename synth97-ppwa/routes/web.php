@@ -52,7 +52,11 @@ Route::get('/about', function () {
 
 Route::get('articles', [ArticlesController::class, 'showAll']);
 
-// {article} is a wildcard
+// create new article
+Route::get('articles/create', [ArticlesController::class, 'create']);
+
+
+// {article} is a wildcard. THIS TAKES PRECEDENT OVER OTHER ROUTES, SO PUT IT BELOW THE SHOW OR CREATE, ETC
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
 

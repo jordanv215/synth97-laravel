@@ -42,7 +42,7 @@ Route::get('/example', function () {
 });
 
 Route::get('/about', function () {
-    $article = App\Models\Article::paginate(2);
+    $article = App\Models\Article::all();
 
     return $article;
     return view('about');

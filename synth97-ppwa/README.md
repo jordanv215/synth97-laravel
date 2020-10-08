@@ -85,3 +85,46 @@ In order to create a new entry with those columns using tinker, these commands w
 At that point, I can run $article to view the entire entry with the new contents
 
 If satisfied, run $article->save();
+
+
+
+## The seven Restful Controller Actions to become familiar with
+## not necessary to follow this convention but is probably a good idea
+
+1. index()
+    - Should render a list
+        - list of articles
+        - list of projects
+        - lists of users
+    Summary: Render a list of a resource.
+
+2. show()
+    - Shows a specific item
+        - show a single article
+        - show me a single project
+        - show me a single user
+    Summary: Show a single resource.
+
+3. create()
+    Summary: Shows a view to create a new resource.
+         domain of the create action is as follows:
+            ** At some point you visit a page that has a form
+            ** Fill out the title
+            ** Fill out the body
+            ** click submit
+
+4. store()
+    Summary: Will persist the resource created in the create form.
+
+5. edit()
+    Summary: Will show a view to edit an existing resource. 
+
+6. update()
+    Summary: Persist the edited resource. 
+
+7. destroy()
+    Summary: Delete the resource. 
+
+
+NOTE: running php artisan make:controller nameController -r will create all 7 of these actions for you
+    - if you add the -m flag as well, it will ALSO reference the model throughout the controller!

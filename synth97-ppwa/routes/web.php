@@ -42,7 +42,7 @@ Route::get('/example', function () {
 });
 
 Route::get('/about', function () {
-    $article = App\Models\Article::latest('updated_at')->get();
+    $article = App\Models\Article::take(3)->latest('updated_at')->get();
     return view('about', [
         'articles' => $article
     ]);

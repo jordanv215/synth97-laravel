@@ -130,3 +130,33 @@ NOTE: running php artisan make:controller nameController -r will create all 7 of
     - if you add the -m flag as well, it will ALSO reference the model throughout the controller!
 
 ## Restful Routing
+
+// REST EXAMPLES
+/*
+    Route::get('articles', 'ArticlesController@index');
+    ** will allow you to read from a list of articles, sort of like a collection
+*/
+
+/*
+    Route::get('/articles/{article}', 'ArticlesController@show');
+    ** if I visit /articles/{ some identifier }, that will allow me to read a single article
+*/
+
+
+/* SUMMARY
+
+** Common http verbs are GET, POST, PUT, DELETE (there's also PATCH but that is usable with PUT most of the time)
+    ** GET /articles (for a collection)
+    ** GET /articles/:id (for a single article)
+    ** POST /articles (create a new article)
+    ** PUT /articles/:id (update the article with a given id)
+    ** DELETE /articles/:id (delete the article with a given id)
+
+
+    ** GET /videos
+    ** GET /videos/2
+    ** PUT /videos/2
+        ** if I wanted to, say, create a form to edit the video. could be this: GET /videos/2/edit
+        ** if I wanted to go to a form that creates a new video, GET /videos/create
+        ** DELETE /videos/2
+*/

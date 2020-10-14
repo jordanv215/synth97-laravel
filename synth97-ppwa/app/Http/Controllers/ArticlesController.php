@@ -25,7 +25,6 @@ class ArticlesController extends Controller
             'body' => 'required'
         ]);
 
-        // clean up
        $article = new Article();
        $article->title = request('title');
        $article->excerpt = request('excerpt');
@@ -49,6 +48,13 @@ class ArticlesController extends Controller
     }
 
     public function update($id) {
+        // validation
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
+
         // find the article with the id associated in the url
         $article = Article::find($id);
 

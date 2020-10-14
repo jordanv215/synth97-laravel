@@ -12,7 +12,11 @@
                 <label class="label" for="title">Title</label>
 
                 <div class="control">
-                    <input class="input @error('title') has-error @enderror" type="text" name="title" id="title">
+                    <input
+                    class="input @error('title') has-error @enderror"
+                    type="text"
+                    name="title"
+                    id="title">
 
                     @error ('title')
                     <p class="help has-error">{{ $errors->first('title') }}</p>
@@ -26,7 +30,11 @@
                 <label class="label" for="excerpt">Excerpt</label>
 
                 <div class="control">
-                    <textarea class="textarea @error('excerpt') has-error @enderror" name="excerpt" id="excerpt"></textarea>
+                    <textarea
+                    class="textarea @error('excerpt') has-error @enderror"
+                    name="excerpt"
+                    id="excerpt">
+                    </textarea>
 
                     @error ('excerpt')
                     <p class="help has-error">{{ $errors->first('excerpt') }}</p>
@@ -38,7 +46,11 @@
                 <label class="label" for="body">Body</label>
 
                 <div class="control">
-                    <textarea class="textarea @error('body') has-error @enderror" name="body" id="body"></textarea>
+                    <textarea
+                    class="textarea @error('body') has-error @enderror"
+                    name="body"
+                    id="body">
+                    </textarea>
 
                     @error ('body')
                     <p class="help has-error">{{ $errors->first ('body') }}</p>

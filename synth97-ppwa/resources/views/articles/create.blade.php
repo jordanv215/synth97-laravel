@@ -16,7 +16,9 @@
                     class="input @error('title') has-error @enderror"
                     type="text"
                     name="title"
-                    id="title">
+                    id="title"
+                    value="{{ old('title') }}">
+
 
                     @error ('title')
                     <p class="help has-error">{{ $errors->first('title') }}</p>

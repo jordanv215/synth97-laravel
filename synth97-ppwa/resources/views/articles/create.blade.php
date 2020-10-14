@@ -13,7 +13,9 @@
 
                 <div class="control">
                     <input class="input" type="text" name="title" id="title">
-                    <p class="help">{{ $errors->first('title')}}</p>
+                    @if ($errors->has('title'))
+                        <p class="help">{{ $errors->first('title')}}</p>
+                    @endif
                 </div>
             </div>
 

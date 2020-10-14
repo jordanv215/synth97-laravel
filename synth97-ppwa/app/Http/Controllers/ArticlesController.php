@@ -20,7 +20,7 @@ class ArticlesController extends Controller
     public function store() {
         // validation
         request()->validate([
-            'title' => 'required',
+            'title' => ['required', 'min:3', 'max:255'],
             'excerpt' => 'required',
             'body' => 'required'
         ]);

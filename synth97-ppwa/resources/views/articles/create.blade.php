@@ -35,7 +35,7 @@
                     <textarea
                     class="textarea @error('excerpt') has-error @enderror"
                     name="excerpt"
-                    id="excerpt">
+                    id="excerpt">{{ old('excerpt') }}
                     </textarea>
 
                     @error ('excerpt')
@@ -51,7 +51,7 @@
                     <textarea
                     class="textarea @error('body') has-error @enderror"
                     name="body"
-                    id="body">
+                    id="body">{{ old('body') }}
                     </textarea>
 
                     @error ('body')

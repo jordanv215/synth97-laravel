@@ -12,10 +12,13 @@
                 <label class="label" for="title">Title</label>
 
                 <div class="control">
-                    <input class="input {{ $errors->has('title') ? 'has-error' : '' }}" type="text" name="title" id="title">
-                    @if ($errors->has('title'))
-                        <p class="help">{{ $errors->first('title')}}</p>
-                    @endif
+                    <input class="input @error('title') has-error @enderror" type="text" name="title" id="title">
+
+                    @error ('title')
+                    <p class="help has-error">{{ $errors->first('title') }}</p>
+                    @enderror
+
+
                 </div>
             </div>
 

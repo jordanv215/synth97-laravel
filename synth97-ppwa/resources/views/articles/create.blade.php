@@ -12,7 +12,7 @@
                 <label class="label" for="title">Title</label>
 
                 <div class="control">
-                    <input class="input" type="text" name="title" id="title">
+                    <input class="input {{ $errors->has('title') ? 'has-error' : '' }}" type="text" name="title" id="title">
                     @if ($errors->has('title'))
                         <p class="help">{{ $errors->first('title')}}</p>
                     @endif
